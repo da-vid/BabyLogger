@@ -1,0 +1,36 @@
+# To set your custom php.ini, add the following line to this file:
+# suphp_configpath /home/yourusername/path/to/php.ini
+# php_value mbstring.func_overload 4 # Required for PWSB support. Please do not uncomment this line.
+
+# Enable Rewriting
+RewriteEngine on
+ 
+# Rewrite user URLs
+#   Input:  BLAH
+#   Output: index.html?i=BLAH
+RewriteRule ^([a-zA-Z0-9]+)/?$ index.html
+
+
+<FilesMatch "\\.js.gz$">
+  ForceType text/javascript
+  Header set Content-Encoding: gzip
+</FilesMatch>
+<FilesMatch "\\.js$">
+  RewriteEngine On
+ RewriteCond %{HTTP:Accept-Encoding} gzip
+  RewriteCond %{REQUEST_FILENAME}.gz -f
+  RewriteRule (.*)\.js$ $1\.js.gz [L]
+  ForceType text/javascript
+</FilesMatch>
+
+<FilesMatch “\\.css.gz$">
+  ForceType text/css
+  Header set Content-Encoding: gzip
+</FilesMatch>
+<FilesMatch “\\.css$">
+  RewriteEngine On
+ RewriteCond %{HTTP:Accept-Encoding} gzip
+  RewriteCond %{REQUEST_FILENAME}.gz -f
+  RewriteRule (.*)\.css$ $1\.css.gz [L]
+  ForceType text/css
+</FilesMatch>

@@ -1,0 +1,11 @@
+# To set your custom php.ini, add the following line to this file:
+# suphp_configpath /home/yourusername/path/to/php.ini
+# php_value mbstring.func_overload 4 # Required for PWSB support. Please do not uncomment this line.
+
+# Enable Rewriting
+RewriteEngine on
+
+# Rewrite user URLs
+#   Input:  BLAH
+#   Output: index.html?i=BLAH
+RewriteRule ^([a-zA-Z0-9]+)/?$ index.html
