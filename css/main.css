@@ -335,7 +335,7 @@ form {
 .listItemName {
 	display: inline-block;
 	font-size: medium;
-	width: 77%;
+	width: 89%;
 	padding: .6em 0 .6em .6em;
 }
 
@@ -358,6 +358,7 @@ form {
 
 .listItemNameContent {
 	font-size: inherit;
+	font-family: monospace;
 	white-space: pre-wrap;      /* CSS3 */   
 	white-space: -moz-pre-wrap; /* Firefox */    
 	white-space: -pre-wrap;     /* Opera <7 */   

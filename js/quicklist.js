@@ -105,7 +105,7 @@ angular.module("quicklist", ["firebase", "linkify", "ui.sortable", "mgcrea.ngStr
             };
 
             $scope.formattedCurrentTime = function() {
-                return moment().format('HH:mm - MMM D: '); 
+                return moment().format('hh:mma - M/D | '); 
             };
 
             $scope.deleteItem = function(itemID) {                
