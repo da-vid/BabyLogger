@@ -4,11 +4,11 @@
 		<meta name="viewport" content="width=device-width">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
-	    <meta property="og:title" content="qBaby: track your baby's eats poops and pees"/>
+	    <meta property="og:title" content="qBaby: track your baby"/>
 		<meta property="og:url" content="http://qBaby.cc"/>
 		<meta property="og:site_name" content="qBaby"/>
-	    <meta property="og:image" content="http://qlist.cc/img/ql-icon-retina-iphone.png"/>
-		<title ng-bind="getPageTitle()">qBaby: baby event tracker</title>
+	    
+		<title ng-bind="getPageTitle()">qBaby: baby tracker</title>
 		<!-- <link rel="stylesheet" href="css/bootstrap.css">	 -->
 		<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
 		<link href='//fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>		
@@ -74,14 +74,30 @@
 							<input name="addItemBox" id="addItemBox" class="addItemBox" type="text" required ng-model="itemName" placeholder="{{fbCount(items) && ('press a button or enter text') || ('press a button or enter text')}}" ng-pattern="moreThanWhitespace" ng-focus="focusItemName()"/>
 							<input class="addItemButton" type="submit" value="add" />
 							<div class="actionButtons">
-								<button type="button" class="btn btn-sm btn-action btn-starteat" ng-click="insertAddItemText('Started Eating')">start eating</button>
-								<button type="button" class="btn btn-sm btn-action btn-stopeat" ng-click="insertAddItemText('Finished Eating')">finish eating</button>
+								<button type="button" class="btn btn-sm btn-action btn-starteat" ng-click="insertAddItemText('Ate: ')">ate food</button>
+								<!--<button type="button" class="btn btn-sm btn-action btn-stopeat" ng-click="insertAddItemText('Finished Eating')">finish eating</button>-->
 								<br />
+								<!--
 								<button type="button" class="btn btn-sm btn-action btn-pee" ng-click="insertAddItemText('Peed')">pee</button>
 								<button type="button" class="btn btn-sm btn-action btn-poop" ng-click="insertAddItemText('Pooped')">poop</button>
+								
 								<br />
 								<button type="button" class="btn btn-sm btn-action btn-sleep" ng-click="insertAddItemText('Went To Sleep')">go to sleep</button>
 								<button type="button" class="btn btn-sm btn-action btn-wakeup" ng-click="insertAddItemText('Woke Up')">wake up</button>
+								-->
+								<button type="button" class="btn btn-sm btn-action btn-stopeat" ng-click="insertAddItemText('1')">1</button>
+								<button type="button" class="btn btn-sm btn-action btn-stopeat" ng-click="insertAddItemText('2')">2</button>
+								<button type="button" class="btn btn-sm btn-action btn-stopeat" ng-click="insertAddItemText('3')">3</button>	
+								<br />
+								<button type="button" class="btn btn-sm btn-action btn-stopeat" ng-click="insertAddItemText('4')">4</button>
+								<button type="button" class="btn btn-sm btn-action btn-stopeat" ng-click="insertAddItemText('5')">5</button>
+								<button type="button" class="btn btn-sm btn-action btn-stopeat" ng-click="insertAddItemText('6')">6</button>	
+								<br />
+								<button type="button" class="btn btn-sm btn-action btn-stopeat" ng-click="insertAddItemText('7')">7</button>
+								<button type="button" class="btn btn-sm btn-action btn-stopeat" ng-click="insertAddItemText('8')">8</button>
+								<button type="button" class="btn btn-sm btn-action btn-stopeat" ng-click="insertAddItemText('9')">9</button>									
+								<br />
+								<button type="button" class="btn btn-sm btn-action btn-stopeat" ng-click="insertAddItemText('0')">0</button>	
 								<br />
 								<button type="button" class="btn btn-sm btn-clear" ng-click="clearAddItemText()">clear</button>
 							</div>
