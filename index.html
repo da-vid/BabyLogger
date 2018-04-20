@@ -74,7 +74,8 @@
 							<input name="addItemBox" id="addItemBox" class="addItemBox" type="text" required ng-model="itemName" placeholder="{{fbCount(items) && ('press a button or enter text') || ('press a button or enter text')}}" ng-pattern="moreThanWhitespace" ng-focus="focusItemName()"/>
 							<input class="addItemButton" type="submit" value="add" />
 							<div class="actionButtons">
-								<button type="button" class="btn btn-sm btn-action btn-starteat" ng-click="insertAddItemText('Ate: ')">ate food</button>
+								<button type="button" class="btn btn-sm btn-action btn-starteat" ng-click="insertAddItemText('Ate: ')">Ate Food</button>
+								<button type="button" class="btn btn-sm btn-action btn-stopeat" ng-click="insertAddItemText('Pain Level: ')">Pain Level</button>
 								<!--<button type="button" class="btn btn-sm btn-action btn-stopeat" ng-click="insertAddItemText('Finished Eating')">finish eating</button>-->
 								<br />
 								<!--
@@ -84,20 +85,9 @@
 								<br />
 								<button type="button" class="btn btn-sm btn-action btn-sleep" ng-click="insertAddItemText('Went To Sleep')">go to sleep</button>
 								<button type="button" class="btn btn-sm btn-action btn-wakeup" ng-click="insertAddItemText('Woke Up')">wake up</button>
-								-->
-								<button type="button" class="btn btn-sm btn-action btn-stopeat" ng-click="insertAddItemText('1')">1</button>
-								<button type="button" class="btn btn-sm btn-action btn-stopeat" ng-click="insertAddItemText('2')">2</button>
-								<button type="button" class="btn btn-sm btn-action btn-stopeat" ng-click="insertAddItemText('3')">3</button>	
-								<br />
-								<button type="button" class="btn btn-sm btn-action btn-stopeat" ng-click="insertAddItemText('4')">4</button>
-								<button type="button" class="btn btn-sm btn-action btn-stopeat" ng-click="insertAddItemText('5')">5</button>
-								<button type="button" class="btn btn-sm btn-action btn-stopeat" ng-click="insertAddItemText('6')">6</button>	
-								<br />
-								<button type="button" class="btn btn-sm btn-action btn-stopeat" ng-click="insertAddItemText('7')">7</button>
-								<button type="button" class="btn btn-sm btn-action btn-stopeat" ng-click="insertAddItemText('8')">8</button>
-								<button type="button" class="btn btn-sm btn-action btn-stopeat" ng-click="insertAddItemText('9')">9</button>									
-								<br />
-								<button type="button" class="btn btn-sm btn-action btn-stopeat" ng-click="insertAddItemText('0')">0</button>	
+								-->								
+								<button type="button" class="btn btn-sm btn-action btn-wakeup" ng-click="insertAddItemText('Whined')">Whiny</button>	
+								<button type="button" class="btn btn-sm btn-action btn-pee" ng-click="insertAddItemText('Observed: ')">Observation</button>	
 								<br />
 								<button type="button" class="btn btn-sm btn-clear" ng-click="clearAddItemText()">clear</button>
 							</div>
